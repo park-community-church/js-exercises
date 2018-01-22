@@ -23,7 +23,7 @@
 
 // Call this function to write to the screen
 function renderToScreen(str, result) {
-    var text = result ? str + ' => ' + result : str;
+    var text = result ? str + ' => \'' + result + '\'': str;
     document.getElementById('result').innerHTML += '<p>' + text + '</p>';
 
 }
