@@ -47,12 +47,14 @@ function firstRepeatNoSpaces(/* arguments here */) {
 testStrings = [
     'stackoverflow',
     'banana',
+    'butler',
     'mayonnaise',
     'JavaScript',
     'criteria',
     'Tom Brady vs Nick Foles',
     'development',
     'I cannot?',
+    'quick lazy fox',
     'C++ can be a hard language to learn',
     'var setUnion = Set(a).union(Set(b));',
     '$80k - $100k'
