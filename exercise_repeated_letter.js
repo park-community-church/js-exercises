@@ -28,20 +28,37 @@ function renderToScreen(str, result) {
 
 }
 
+function inArray(arr, character) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === character) {
+            return true;
+        }
+    }
+    return false;
+}
+
 /*
  * Given an input string, outputs either the first repeated character in the input string,
  * or if none exists, 'No repetitions'
  */
-function firstRepeat(/* arguments here */) {
-    // Your code here
+function firstRepeat(inputString) {
+    var letterMemory = [];
+    for (var i = 0; i < inputString.length; i++) {
+        var currentLetter = (inputString.charAt(i));
+        if (inArray(letterMemory, currentLetter)){
+            return currentLetter;
+        } else letterMemory.push(currentLetter)
+    }
+    return 'No repetitions'
 }
 
 /*
  * The same functionality as firstRepeat, but ignores the space character as a
  * possible repetition
  */
-function firstRepeatNoSpaces(/* arguments here */) {
-    // Your code here
+function firstRepeatNoSpaces(inputString) {
+    inputString = inputString.replace(/\s/g,'');
+    return firstRepeat(inputString)
 }
 
 testStrings = [
